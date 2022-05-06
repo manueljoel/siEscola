@@ -1,0 +1,94 @@
+body{
+    height:100vh;
+     background:#0E61F4 /*#0062e6*/!important;
+     display:flex;
+     flex-direction:column;
+     align-items:center;
+     justify-content: center;  
+  }
+  
+  .card{
+    overflow: hidden;
+    border: 0 !important;
+    border-radius: 20px !important;
+    box-shadow: 0 0.5rem 1rem 0  rgba(0,0,0, 0.1);
+  }
+  
+  .img-left{
+    width:45%;
+    background: url("../img/undraw_develop_app_re_bi4i.svg")center;
+    background-size: cover; 
+  }
+  
+  .card-body{
+    padding: 2rem;
+  }
+  
+  .title{
+    margin-bottom: 2rem;
+  }
+  
+  .form-input{
+    position:relative;
+  
+  }
+
+  h4{
+    color:#0E61F4 !important;
+  }
+  
+  .form-input input{
+    width:100%;
+    height:45px;
+    padding-left: 40px;
+    margin-bottom:20px;
+   outline: none;
+  
+  }
+  
+  .form-input input::placeholder{
+    color: #0E61F4;
+    padding-left: 0px;
+  }
+  
+  .form-input input:focus, .form-input input:valid{
+    border: 2px solid #00b7ff;
+  }
+  
+  .form-box .btn{
+    margin-top: 10px;
+    border:none;
+    cursor: pointer;
+    border-radius: 50px;
+    background:#0E61F4;/*/ #00b7ff;*/
+    color: #fff;
+    font-size:90%;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: .1rem;
+    transition:0.5s;
+  }
+  
+  .form-box .btn:hover{
+    background: #0069d9;
+     
+  }
+  
+  .forget-link{
+    color:#0E61F4; /*#00b7ff;*/
+    font-weight: bold;
+  }
+  
+  .forget-link:hover{
+    color: #0069d9;
+    text-decoration: none;  
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
