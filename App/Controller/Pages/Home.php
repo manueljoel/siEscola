@@ -10,7 +10,8 @@ class Home
   public function getHome()
   {
 
-    return 'Olá MUndo';
+    
+    return View::render('Pages/home.php');
   }
 
 }
