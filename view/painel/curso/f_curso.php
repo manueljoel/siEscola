@@ -1,31 +1,43 @@
-<?php 
-   include_once ("../controler/Ccurso.php");
+<?php
+include_once('../../../view/painel/layouts/header.php');
+include_once('../../../view/painel//layouts/navbar.php');
 ?>
-<link rel="stylesheet" href="css/motorista.css">
-<div class="row mt-5">
 
-<div class="col-md-10 col-lg-10 col-sm-12 col-xs-12">
-<div class="alert alert-primary" role="alert">
-   cadastrar Cursos
-</div>
-<form method ="post" action="../controler/Ccurso.php">
-  <div class="form-group">
-    <input type="text" name="acao" value="adicionar" style="display: none;">
-    <label for="descricao">Descrição</label>
-    <input type="text" class="form-control" name ="descricao" id="descricao" placeholder="*seu curso" required>
+<div class="container py-5">
+  <div class="row">
+    <div class="col-md-10 col-lg-10 col-sm-12 col-xs-12">
+      <div class="alert alert-primary" role="alert">
+        cadastrar Cursos
+      </div>
+
+      <form method="post" action="../../../Controller/Ccurso.php">
+        <div class="row">
+          <div class="form-group">
+            <input type="text" name="acao" value="adicionar" style="display: none;">
+            <label for="descricao">nome do curso</label>
+            <input type="text" class="form-control" name="nome" id="nome" placeholder="*digite o curso" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group">
+            <input type="text" name="acao" value="adicionar" style="display: none;">
+            <label for="descricao">Abreviatura</label>
+            <input type="text" class="form-control" name="abreviatura" id="abreviatura" placeholder="*" required>
+          </div>
+        </div>
+
+        <br>
+        <button type="submit" name="bt_s" class="btn btn-success btn-sm">
+          <i class="fa fa-dot-circle-o"></i>
+          Salvar</button>
+        <a href="../../painel/curso/l_curso.php" class="btn btn-primary btn-sm">ver registros</a>
+      </form>
+    </div>
   </div>
-  
-  <button type="submit" name="bt_s" class="btn btn-success btn-sm">
-  <i class="fa fa-dot-circle-o"></i>   
-  Salvar</button>
-  <a href="?pagina=l_curso" class="btn btn-primary btn-sm">ver registros</a>
-
-  
-  
-
-</form>
-
+</div>
 </div>
 
-
-</div>
+<?php
+include_once('../../../view/painel/layouts/footer.php');
+?>

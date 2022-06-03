@@ -1,6 +1,7 @@
 <?php
 
-class connection{
+class connection
+{
 
     private $host;
     private $user;
@@ -9,11 +10,12 @@ class connection{
     private $port;
     private $conn;
 
-    public function __construct(){
-        
+    public function __construct()
+    {
+
         $this->host = 'localhost';
         $this->user = 'root';
-        $this->databaseName = 'db_propinas';
+        $this->databaseName = 'scriptspp';
         $this->password = '';
         $this->port = 3306;
         $this->conn = false;
@@ -21,44 +23,38 @@ class connection{
         $this->connect();
     }
 
-    public function connect(){
-        
-        if(!$this->conn){
-            $this->conn = mysqli_connect($this->host,$this->user,$this->password,$this->databaseName, $this->port);
+    public function connect()
+    {
 
-            if(!$this->conn){
+        if (!$this->conn) {
+            $this->conn = mysqli_connect($this->host, $this->user, $this->password, $this->databaseName, $this->port);
+
+            if (!$this->conn) {
                 echo 'não foi possível conectar';
                 die();
-            }
-            else{
-               # echo 'conexão bem sucedida';
             }
         }
 
         return $this->conn;
     }
 
-    public function executeQuery($sql){
-        
+    public function executeQuery($sql)
+    {
+
         $result = mysqli_query($this->conn, $sql);
         return $result;
     }
 
-    public function getResultados($sql){
-       
+    public function getResultados($sql)
+    {
+
         $result = $this->executeQuery($sql);
         $registos = array();
 
-       while($result != false && $linha = mysqli_fetch_assoc($result)){
+        while ($result != false && $linha = mysqli_fetch_assoc($result)) {
             $registos[] = $linha;
-       }
+        }
 
-       return $registos;
-
+        return $registos;
     }
-
-
 }
-
-
-?>
